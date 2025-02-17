@@ -36,7 +36,7 @@ public class ModDataParser {
                         config.load();
                         ArrayList<Object> modsList = config.get("mods");
                         if (modsList == null || modsList.isEmpty()) continue;
-                        Config mods = (Config) modsList.getFirst();
+                        Config mods = (Config) modsList.get(0);
                         String modId = mods.get("modId");
                         String version = mods.get("version");
                         if (Objects.equals(version, "${file.jarVersion}")) {
